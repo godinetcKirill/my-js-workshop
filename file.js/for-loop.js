@@ -2,9 +2,12 @@
 Циклы(позволяют повторять один и тот же кусочек кода много раз )
 Цикл For_____
 инициализация -оюьявляем счетчик   let i = 0;
-i-итерацция.
+i-итерацция. LINTER соврем инструм качества проверки кода.
 условие- условие прекращение цикла .чаще всего больше_меньше.
 */
+// for( инициализация(счетчик); условие(прекращение цикла) ; пост-выражение(увеличиваем, уменьшаем счетчик ) ){
+// тело цикла 
+// }
 
 // for (let i = 5; i < 10; i += 1) {
 //     console.log(i);
@@ -15,9 +18,9 @@ i-итерацция.
 Pre-increment and Post-increment ZLOOOOO
 */
 
-for (let i = 0; i < 10; i++) {
-  console.log(i);
-}
+// for (let i = 0; i < 10; i++) {
+//   console.log(i);
+// }
 
 /*
 -напиши скрипт котрый подсчитывает обущю сумму работников.
@@ -26,23 +29,20 @@ for (let i = 0; i < 10; i++) {
 - Записать сумму в переменную totalSalary и вывести в консоль
 */
 // 1. сделать переменные
-const minSalary = 500;
-const maxSalary = 5000;
-const employees = 7;
-let totalSalary = 0;
-// 2.перебрать раотников в цикле
-for (let i = 1; i <= employees; i += 1) {
-    const salary = Math.round(
-        Math.random() * (maxSalary - minSalary) + minSalary,
-    );
-    console.log(`ЗП работника номер ${i} -${salary}`);
-    totalSalary += salary;
-    console.log('totalSalary:', totalSalary);
-}
-
-// 3. сгенерировать случайную зп
-// 4. прибавить к тоталу
-// 5. сделать лог
+// const minSalary = 500;
+// const maxSalary = 5000;
+// const employees = 5;
+// let totalSalary = 0;
+// // 2.перебрать раотников в цикле
+// for (let i = 1; i <= employees; i += 1) {
+//   // 3. сгенерировать случайную зп
+//   const salary = Math.round(Math.random() * (maxSalary - minSalary) + minSalary);
+//   console.log(`ЗП работника номер ${i} -${salary}`);
+//   // 4. прибавить к тоталу
+//   totalSalary += salary;
+// }
+// // 5. сделать лог
+// console.log('totalSalary:', totalSalary);
 
 /*
 Напиши скрипт который подсчитывает сумму всех четных чисел,
@@ -50,3 +50,44 @@ for (let i = 1; i <= employees; i += 1) {
 -например если мін =0 и макс =5, то диапазон 0-5, и в нем два четных 
 числа -2 и 4,их сумма 6. 
 */
+
+
+//  1-обьявить переменные
+// const min = 5;
+// const max = 13;
+// let total = 0;
+
+// // 2-фор от min до max с шагом в 1
+// for (let i = min; i <= max; i += 1){
+
+
+//   // 3- проверяем остаток от деления
+//   console.log(i);
+//   if (i % 2 === 0) {
+//     console.log('чётное:', i);
+//     // 4- пишем в сумму
+//       total += i;
+//   }
+// }
+// console.log('total:', total);
+
+
+
+
+// ЛОгика от обратного !:
+
+const min = 10;
+const max = 50;
+let total = 0;
+// // 2-фор от min до max с шагом в 1
+for (let i = min; i <= max; i += 1) {
+     // 3- проверяем остаток от деления
+    if (i % 2 !== 0) {
+        console.log('Не чётное :', i);
+        continue;
+    }
+    // 4- пишем в сумму 
+    console.log('чётное:', i);
+    total += i;
+}
+console.log('total:', total);
