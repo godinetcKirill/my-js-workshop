@@ -46,18 +46,39 @@ const getAllNames = function (allFriends) {
 
 //Получаем имена только друзей которые онлайн
 
-
-
 const getOnlineFriends = function (allFriends) {
+
+    const onlineFriends = [];
     for (const friend  of allFriends) {
         console.log(friend);
+        console.log(friend.online);
+
+        if (friend.online) {
+            onlineFriends.push(friend)
+        }
     }
+    return onlineFriends
 }
 console.log(getOnlineFriends(friends));
 
-const getOfflineFriends = function (allFriends) {};
 
+// ------------------------------------------------------
+//получаем имена которіе не онлайн
 
+const getOfflineFriends = function (allFriends) {
+    const offlineFriends = [];
+
+    for (const friend of allFriends) {
+        console.log(friend.online);
+
+        if (!friend.online) {
+            offlineFriends.push(friend);
+        }
+    }
+    return offlineFriends;
+}
+
+console.log(getOfflineFriends(friends));
 
 // ------------------------------------------------------
 
